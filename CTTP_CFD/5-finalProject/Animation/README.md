@@ -4,7 +4,8 @@
 # Lagrangian Spray Cloud and Evaporization
 
 ## Spray Parcel 
-The parcel are render as sphare scale with the diameter and scale by 25 times. Then are colored with the Temperature gradient and Age
+The parcels are rendered as spheres, scaled to a diameter 25 times their original size. They are then colored according to a temperature gradient and their age.
+
 https://github.com/user-attachments/assets/6dfa42a3-67e6-4ffb-926d-86ad5305c983
 
 
