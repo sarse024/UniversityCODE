@@ -1,3 +1,8 @@
+# CFD Simulation of Combustion Chamber
+
+This repository contains visualization assets from my Computational Fluid Dynamics (CFD) study of n-heptane combustion in a 3D chamber with a V-shaped splitter. The simulations were performed using OpenFOAM, with post-processing done in ParaView and Python.
+
+
 # Fluid Velocity 
 
 
@@ -39,6 +44,5 @@ https://github.com/user-attachments/assets/60cc5075-4e38-4c4f-aaf1-b4642d875197
 ### Slice YZ Slow
 https://github.com/user-attachments/assets/2ad74945-5382-4f06-8036-9becb123cbab
 
-### Slice XY Slow
 
 
