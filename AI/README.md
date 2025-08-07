@@ -86,19 +86,8 @@ python video_infer.py --config ./configs/yolov8/yolov8n.yaml \
 - Instance segmentation support
 - Fine-tuned training for specific domains (e.g. aerial, night scenes)
 
-## 📚 References
-
-- [MindYOLO GitHub](https://github.com/mindspore-lab/mindyolo)
-- [MindSpore Official Website](https://www.mindspore.cn/en)
-- [COCO Dataset](https://cocodataset.org/#home)
-
 ## 👤 Author
 
 Samuele Orsenigo  
-Artificial Intelligence Project — Politecnico di Milano
-
----
-
-**License:** MIT *(or your preferred license — remember to add a `LICENSE` file)*  
-**Repository Link:** [Insert your GitHub repo link here]
+Artificial Intelligence Project — Politecnico di Milano and Northwestern Polytechnical University
 
