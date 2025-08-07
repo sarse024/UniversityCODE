@@ -28,26 +28,31 @@ While it performs well in simple environments, it may struggle in occluded or de
 Before you begin, make sure you have the following installed:
 
 - Python ≥ 3.8
-- [MindSpore](https://www.mindspore.cn/en) (with appropriate backend: CPU, GPU, or Ascend)
-- `pip` or `conda` for package management
+- [MindSpore Installation Guide](https://www.mindspore.cn/install) (with appropriate backend: CPU, GPU, or Ascend)
+- [MindYolo Installation Guide](https://mindspore-lab.github.io/mindyolo/installation/)
 
 ### 🐍 Recommended Installation Steps
 
 ```bash
-# (Optional) Create a virtual environment
-python -m venv mindyolo-env
-source mindyolo-env/bin/activate  # On Windows: mindyolo-env\Scripts\activate
+# Create the enviroment (i use conda, but you can use every method)
+conda create -n mindspore_py311 python=3.11
+conda activate mindspore_py311
 
-# Clone the repository
-git clone https://github.com/your-username/video-inference-mindyolo.git
-cd video-inference-mindyolo
+# Install mindspore according to hardware (in this case CPU for Windows)
+set MS_VERSION=2.6.0
+pip install https://ms-release.obs.cn-north-4.myhuaweicloud.com/%MS_VERSION%/MindSpore/cpu/x86_64/mindspore-%MS_VERSION:-=%-cp311-cp311-win_amd64.whl --trusted-host ms-release.obs.cn-north-4.myhuaweicloud.com -i https://repo.huaweicloud.com/repository/pypi/simple/
 
-# Install dependencies
-pip install -r requirements.txt
+# Install mindyolo 
+git clone https://github.com/mindspore-lab/mindyolo.git
+cd mindyolo
+pip install -e .
+
+# Clone the repository inside ./mindyolo or simple download video_infer.py
+svn export https://github.com/sarse024/UniversityCODE/trunk/AI
+
 ```
 
-> 💡 Be sure to install MindSpore manually according to your hardware:  
-> [MindSpore Installation Guide](https://www.mindspore.cn/install)
+> 💡 Be sure to install MindSpore manually according to your hardware
 
 ## ▶️ Usage
 
@@ -75,22 +80,10 @@ python video_infer.py --config ./configs/yolov8/yolov8n.yaml \
 |                | `--min_confidence` | Minimum confidence to show detection |
 | Hardware       | `--device_target`  | Backend: `CPU`, `GPU`, or `Ascend` |
 
-## 📂 Folder Structure
-
-```
-.
-├── configs/                  # YOLOv8 model configs
-├── output/                   # Processed videos
-├── weights/                  # Model checkpoints
-├── video_infer.py            # Main inference script
-└── README.md
-```
-
 ## 📊 Future Work
 
 - Integrate advanced tracking (e.g. DeepSORT, ByteTrack)
 - Instance segmentation support
-- Web interface for real-time demos
 - Fine-tuned training for specific domains (e.g. aerial, night scenes)
 
 ## 📚 References
